@@ -3,17 +3,15 @@ html, body {
 	padding: 0;
 	/*background: url('../images/casey-horner-fsJB3KT2rj8-unsplash.jpg')*/
 	background-image: linear-gradient(to top, #000000 0%, #09203f 100%);
+	min-width: 320px;
 }
 .wrapper {
 	display:flex;
 	flex-direction: column;
 	min-height: 100vh;
-	
-	
-	
 }
 .conteiner {
-	max-width: 1200px;
+	/*max-width: 1200px;*/
 	margin: 0 auto;
 	flex: 1 0 auto;	
 }
@@ -21,7 +19,7 @@ a {
 	text-decoration: none;
 }
 /* header */
-.top_heder {
+/*.top_heder {
 	height: 25px;
 	width: 100%;
 	background-color: #191970;
@@ -30,44 +28,70 @@ a {
 	padding-left:30px;
 	padding-bottom: 10px;
 	font-size: 16px;
+}*/
+.header {
+	display: relative;
 }
-
-.head_menu {
+.header_menu {
 	height: 90px;
 	display: fixed;
 	width: 100%;
-	background-color: rgb(112, 128, 144, .4);
-	top: 25px;
+	background-color: rgb(112, 128, 144, .1);
+	top: 0;
+	z-index: 9999;
 }
 nav {
 	display: flex;
 	justify-content:space-around;
+	flex-wrap: wrap;
 	align-items: center;
-	height: 90px;
+	height: 100%;
 	width: 100%;
 }
-
 nav span {
-	/*border: 1px solid #fff;
-	box-sizing: border-box;*/
-	width: 200px;
-	height: 60px;
-	/*text-align: center;*/
-	padding-top: 35px;
-	/*padding-bottom: 20px;*/
+	box-sizing: border-box;
+	width: 170px;
+	height: 65px;
+	text-align: center;
+	padding-top: 20px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
-	cursor: pointer;
 	flex: none;	
 }
-nav span:last-child {
-	width: 150px;
-	cursor: pointer;
-	flex: none;	
+.netwerk_conteiner {
+	padding-top: 15px;
 }
 .textbotton {
-  font-size: 18px;
-  color: #FFD700;
+	cursor: pointer;
+	font-size: 18px;
+	color: #FFD700;
+}
+.netwerk {
+	padding: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.netwerk img {
+	width: 30px;
+}
+
+.logoheader {
+	height: 350px;
+	width: 50%;
+	display:flex;
+	background: url('../images/wil-stewart-RpDA3uYkJWM-unsplash.jpg');
+	justify-content:center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+.logo {
+	text-align: center;
+	font-size: 18px;
+	color: #FFD700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 /* main */
 
