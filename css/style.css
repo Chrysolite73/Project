@@ -13,9 +13,12 @@ html, body {
 .conteiner {
 	max-width: 1200px;
 	margin: 0 auto;
-	flex: 1 0 auto;
-	
+	flex: 1 0 auto;	
 }
+a {
+	text-decoration: none;
+}
+/* header */
 .top_heder {
 	height: 25px;
 	width: 100%;
@@ -30,19 +33,59 @@ html, body {
 	top: 25px;
 }
 nav {
-	display: inline-block;
-	position: relative;
+	display: flex;
+	justify-content:space-around;
+	align-items: center;
+	height: 90px;
+	width: 100%;
 }
 
 nav span {
-	display: inline-block;
-	position: relative;
-	
+	/*border: 1px solid #fff;
+	box-sizing: border-box;*/
+	width: 200px;
+	height: 60px;
+	/*text-align: center;*/
+	padding-top: 35px;
+	/*padding-bottom: 20px;*/
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	cursor: pointer;
+	flex: none;	
 }
+nav span:last-child {
+	width: 150px;
+	cursor: pointer;
+	flex: none;	
+}
+.textbotton {
+  font-size: 18px;
+  color: #FFD700;
+}
+/* main */
+
+/* footer */
 footer {
 	flex: 0 0 auto;
 }
+.footer {
+	display:flex;
+	justify-content:space-around;
+	align-items: center;
+	height: 90px;
+	width: 100%;
+	background-color: #000033;
+}
 .footer span {
-	display: flex;
-	justify-content: space-around;
+	/*display: flex;
+	justify-content: space-around;*/
+	width: 350px;
+	height: 60px;
+	text-align: center;
+	padding-top: 30px;
+	/*padding-bottom: 10px;*/
+	letter-spacing: 3px;
+	flex: none;	
+	font-size: 16px;
+	color: #FFD700;
 }
