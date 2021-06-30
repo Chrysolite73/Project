@@ -36,7 +36,7 @@ a {
 	height: 90px;
 	display: fixed;
 	width: 100%;
-	background-color: rgb(112, 128, 144, .1);
+	background-color: rgb(112, 128, 144, .4);
 	top: 0;
 	z-index: 9999;
 }
@@ -59,7 +59,7 @@ nav span {
 	flex: none;	
 }
 .netwerk_conteiner {
-	padding-top: 15px;
+	padding-top: 12px;
 }
 .textbotton {
 	cursor: pointer;
@@ -74,7 +74,6 @@ nav span {
 .netwerk img {
 	width: 30px;
 }
-
 .logoheader {
 	height: 350px;
 	width: 50%;
@@ -88,10 +87,11 @@ nav span {
 }
 .logo {
 	text-align: center;
-	font-size: 18px;
+	/*font-size: 22px;*/
 	color: #FFD700;
 	letter-spacing: 3px;
 	text-transform: uppercase;
+	z-index: 0;
 }
 /* main */
 
@@ -99,20 +99,57 @@ nav span {
 footer {
 	flex: 0 0 auto;
 }
-.form {
+.top_footer {
 	height: 250px;
 	width: 100%;
-	background-color: rgb(112, 128, 144, .4);
+	background-color: rgb(112, 128, 144, .1);
+	color: #FFD700;
 }
-.footer {
+.email {
+	width: 400px;
+	height: 50px;
+	background-color: #F5F5DC;
+	border-radius: 10px;
+	border: 2px solid #FFD700;
+	box-sizing: border-box;
+}
+.form_text {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	color: #FFD700;
+	letter-spacing: 3px;
+	padding-top: 15px;
+}
+
+.bottom_footer {
 	display:flex;
 	justify-content:space-around;
 	align-items: center;
 	height: 90px;
 	width: 100%;
-	background-color: rgb(112, 128, 144, .3);
+	background-color: rgb(112, 128, 144, .2);
 }
-.footer span {
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+form p {
+	font-size: 20px;
+}
+button {
+	width: 150px;
+	height: 50px;
+	background-color: #DAA520;
+	border: 2px solid #DAA520;
+	border-radius: 10px;
+	box-sizing: border-box;
+	font-size: 18px;
+	color: #2F4F4F;
+}
+.bottom_footer span {
 	width: 350px;
 	height: 60px;
 	text-align: center;
