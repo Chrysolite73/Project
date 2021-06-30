@@ -1,17 +1,17 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	/*background: url('../images/casey-horner-fsJB3KT2rj8-unsplash.jpg')*/
-	background-image: linear-gradient(to top, #000000 0%, #09203f 100%);
+	
 	min-width: 320px;
 }
 .wrapper {
 	display:flex;
 	flex-direction: column;
 	min-height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(to top, #000000 0%, #09203f 100%);
 }
 .conteiner {
-	/*max-width: 1200px;*/
 	margin: 0 auto;
 	flex: 1 0 auto;	
 }
@@ -34,16 +34,15 @@ a {
 }
 .header_menu {
 	height: 90px;
-	display: fixed;
+	position: fixed;
 	width: 100%;
-	background-color: rgb(112, 128, 144, .4);
+	background-color: rgba(112, 128, 144, .4);
 	top: 0;
 	z-index: 9999;
 }
 nav {
 	display: flex;
 	justify-content:space-around;
-	flex-wrap: wrap;
 	align-items: center;
 	height: 100%;
 	width: 100%;
@@ -56,7 +55,7 @@ nav span {
 	padding-top: 20px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
-	flex: none;	
+	/*flex: none;	*/
 }
 .netwerk_conteiner {
 	padding-top: 12px;
@@ -75,11 +74,12 @@ nav span {
 	width: 30px;
 }
 .logoheader {
-	height: 350px;
-	width: 50%;
+	height: 300px;
+	width: 100%;
 	display:flex;
 	background: url('../images/wil-stewart-RpDA3uYkJWM-unsplash.jpg');
-	justify-content:center;
+	flex-direction: column;
+	justify-content:flex-end;
 	align-items: center;
 	position: absolute;
 	top: 0;
@@ -91,7 +91,6 @@ nav span {
 	color: #FFD700;
 	letter-spacing: 3px;
 	text-transform: uppercase;
-	z-index: 0;
 }
 /* main */
 
@@ -102,7 +101,7 @@ footer {
 .top_footer {
 	height: 250px;
 	width: 100%;
-	background-color: rgb(112, 128, 144, .1);
+	background-color: rgba(112, 128, 144, .1);
 	color: #FFD700;
 }
 .email {
@@ -123,29 +122,21 @@ footer {
 	letter-spacing: 3px;
 	padding-top: 15px;
 }
-
-.bottom_footer {
-	display:flex;
-	justify-content:space-around;
-	align-items: center;
-	height: 90px;
+.form {
 	width: 100%;
-	background-color: rgb(112, 128, 144, .2);
-}
-form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
 }
-form p {
+.form p {
 	font-size: 20px;
 }
 button {
 	width: 150px;
 	height: 50px;
 	background-color: #FFD700;
-	border: 2px solid #FFD700;
+	/*border: 2px solid #FFD700;*/
 	border-radius: 10px;
 	box-sizing: border-box;
 	font-size: 18px;
@@ -155,6 +146,14 @@ button:hover {
 	background-color: #FFFF00;
 	border: 2px solid #FFFF00;
 }
+.bottom_footer {
+	display:flex;
+	justify-content:space-around;
+	align-items: center;
+	height: 90px;
+	width: 100%;
+	background-color: rgba(112, 128, 144, .2);
+}
 .bottom_footer span {
 	width: 350px;
 	height: 60px;
@@ -162,7 +161,7 @@ button:hover {
 	padding-top: 30px;
 	/*padding-bottom: 10px;*/
 	letter-spacing: 3px;
-	flex: none;	
+	/*flex: none;*/	
 	font-size: 16px;
 	color: #FFD700;
 }
