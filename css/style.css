@@ -36,9 +36,9 @@ a {
 	height: 90px;
 	position: fixed;
 	width: 100%;
-	background-color: rgba(112, 128, 144, .4);
+	background-color: rgba(112, 128, 144, .3);
 	top: 0;
-	z-index: 9999;
+	z-index: 5;
 }
 nav {
 	display: flex;
@@ -47,7 +47,12 @@ nav {
 	height: 100%;
 	width: 100%;
 }
-nav span {
+.textbotton {
+	cursor: pointer;
+	font-size: 18px;
+	color: #FFD700;
+}
+.menupoint {
 	box-sizing: border-box;
 	width: 170px;
 	height: 65px;
@@ -55,16 +60,52 @@ nav span {
 	padding-top: 20px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
 	/*flex: none;	*/
 }
+.pulldown-point {
+	color: #FFD700;
+	/*background-color: rgb(112, 128, 144);*/
+}
+/*.menupoint {
+	display: inline-block;
+	position: relative;
+	margin: 0 10px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+}*/
+.menupoint > span {
+	display: none;
+	position: absolute;
+	background: rgb(112, 128, 144);
+	top: 65px;
+	left: 0;
+	padding: 10px 10px 5px;
+	border-radius: 5px;
+	/*box-shadow: 1px 2px 5px rgba(0,0,0,.4);*/
+	font-size: 18px;
+	text-transform: none;
+}
+.menupoint:hover > span,
+.menupoint > span:hover {
+	display: block;
+}
+.menupoint:hover {
+	border-radius: 5px;
+	background: rgba(112, 128, 144, .7); 
+}
+.menupoint:hover .textbotton {
+	color: #FFFF00;
+}
+.pulldown-point:hover {
+	color: #FFFF00;
+}
+
 .netwerk_conteiner {
 	padding-top: 12px;
 }
-.textbotton {
-	cursor: pointer;
-	font-size: 18px;
-	color: #FFD700;
-}
+
 .netwerk {
 	padding: 0;
 	box-sizing: border-box;
@@ -127,7 +168,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
+	gap: 15px;
 }
 .form p {
 	font-size: 20px;
@@ -136,11 +177,12 @@ button {
 	width: 150px;
 	height: 50px;
 	background-color: #FFD700;
-	/*border: 2px solid #FFD700;*/
+	border: 2px solid #FFD700;
 	border-radius: 10px;
 	box-sizing: border-box;
 	font-size: 18px;
 	color: #2F4F4F;
+	cursor: pointer;
 }
 button:hover {
 	background-color: #FFFF00;
