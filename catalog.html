@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Каталог</title>
-		<link rel="icon" href="images\icons8-sun-64(1).png" type="image">
+		<link rel="icon" href="images/icons8-sun-64(1).png" type="image">
 		<!-- шрифты -->
+		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery-3.6.0.min.js"></script>
-		<!-- <script src="js/bootstrap.bundle.js"></script>-->
-		<script src=script.js></script>
+		<script src="js/bootstrap.bundle.js"></script>
+		<script src="js/script.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -73,12 +74,54 @@
 				</div>
 			</header>
 			<main class="conteiner">
-				
-				
-				
-				<div>
-	
-				</div>
+				<aside>
+                    <div class="catmenu">
+                        <div class="catmenu_item">
+                            <a href="#">Билеты на космический корабль</a>
+                            <div class="submenu">
+                                <a href="#">Tovar 1 version 1</a>
+                                <a href="#">Tovar 1 version 2</a>
+                                <a href="#">Tovar 1 version 3</a>
+                                <a href="#">Tovar 1 version 4</a>
+                            </div>
+                            <div class="submenu_mover">V</div>
+                        </div>
+                        <div class="catmenu_item">
+                            <a href="#">Звезды</a>
+                            <div class="submenu">
+                                <a href="#">Tovar 2 version 1</a>
+                                <a href="#">Tovar 2 version 2</a>
+                            </div>
+                            <div class="submenu_mover">V</div>
+                        </div>
+                        <div class="catmenu_item">
+                            <a href="#">Осколки метеоритов</a>
+                            <div class="submenu">
+                                <a href="#">Tovar 3 version 1</a>
+                                <a href="#">Tovar 3 version 2</a>
+                                <a href="#">Tovar 3 version 3</a>
+                            </div>
+                            <div class="submenu_mover">V</div>
+                        </div>
+                        <div class="catmenu_item">
+                            <a href="#">Камни и минералы</a>
+                        </div>
+                    </div>
+                </aside>
+                <div class="cat-blocks">
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                    <div class="cat-unit"></div>
+                </div>
 			</main>
 			<footer>
 				<div class="top_footer">
@@ -90,14 +133,18 @@
 					</div>
 					<form method="post" action="#">
 						<div class="form">
-							<p>E-mail:&#160;&#160;<input type="text" name="email" class="email"></p>
-							<button type="submit">Подписаться</button>
+							<p>E-mail:&#160;&#160;</p>
+							<input type="text" name="email" class="email">
+							<button class="form_button" type="submit">Подписаться</button>
 						</div>
 					</form>
 				</div>
-				<div class="bottom_footer">
+				<div class="middle_footer">
 					<span>8 800 011 23 58</span>
 					<span>Москва, ул. Галактическая д. 73</span>
+				</div>
+				<div class="bottom_footer">
+					<span>&#169; 2021 Chrysolite</span>
 				</div>
 			</footer> 
 		</div>

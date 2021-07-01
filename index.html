@@ -2,13 +2,14 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Маленький метеорит. Интернет магази</title>
-		<link rel="icon" href="images\icons8-sun-64(1).png" type="image">
+		<title>Маленький метеорит. Интернет-магазин</title>
+		<link rel="icon" href="images/icons8-sun-64(1).png" type="image">
 		<!-- шрифты -->
+		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery-3.6.0.min.js"></script>
-		<!-- <script src="js/bootstrap.bundle.js"></script>-->
-		<script src=script.js></script>
+		<script src="js/bootstrap.bundle.js"></script>
+		<script src="js/script.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -28,19 +29,28 @@
 							<div>
 								<img src="images\icons8-sun-64(1).png" alt="Логотип">
 							</div>
-							<span>
+							<span class="menupoint">
 								<a href="#" class="textbotton">O нас</a>
 							</span>
-							<span>
+							<span class="menupoint">
 								<a href="#" class="textbotton">Главная</a>
 							</span>
-							<span>
+							<span class="menupoint">
 								<a href="#" class="textbotton">Каталог</a>
+								<span>
+									<a href="#" class="pulldown-point">Интернет-магазин</a>
+									<a href="#" class="pulldown-point">Магазины партнеров</a>
+									<a href="#" class="pulldown-point">Купить в Москве</a>
+								</span>
 							</span>
-							<span>
+							<span class="menupoint">
 								<a href="#" class="textbotton">Контакты</a>
+								<span>
+									<a href="#" class="pulldown-point">Доставка и оплата</a>
+									<a href="#" class="pulldown-point">Вопросы и ответы</a>
+								</span>
 							</span>
-							<span>
+							<span class="menupoint">
 								<a href="#" class="textbotton">Корзина</a>
 							</span>
 							<span class="netwerk_conteiner">
@@ -81,14 +91,18 @@
 					</div>
 					<form method="post" action="#">
 						<div class="form">
-							<p>E-mail:&#160;&#160;<input type="text" name="email" class="email"></p>
-							<button type="submit">Подписаться</button>
+							<p>E-mail:&#160;&#160;</p>
+							<input type="text" name="email" class="email">
+							<button class="form_button" type="submit">Подписаться</button>
 						</div>
 					</form>
 				</div>
-				<div class="bottom_footer">
+				<div class="middle_footer">
 					<span>8 800 011 23 58</span>
 					<span>Москва, ул. Галактическая д. 73</span>
+				</div>
+				<div class="bottom_footer">
+					<span>&#169; 2021 Chrysolite</span>
 				</div>
 			</footer> 
 		</div>
