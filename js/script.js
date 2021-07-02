@@ -13,4 +13,6 @@ $(function(){
             }, 1000);
         }
     });
+	
+	$('#privet').click(function(){alert('Привет!')});
 });
