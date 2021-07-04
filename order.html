@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Корзина</title>
+		<link rel="icon" href="images/icons8-sun-64(1).png" type="image">
+		<!-- шрифты -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/bootstrap.bundle.js"></script>
+		<script src="js/jquery.mask.js"></script>
+		<script src="js/order.js"></script>
+		<script src="js/calendar.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				 <!--div id="yourcity">
+                    <p>Ваш город: Москва</p>
+                        <div class="div-popup">
+                        <span>Ваш город: Москва?</span>
+                            <button type="button" class="btn-yes">Да</button>
+                            <button type="button" class="btn-no">Нет</button>
+                        </div>
+                 </div-->
+				
+				 <div class="header">
+					<div class="header_menu">
+						<nav>
+							<div>
+								<img  src="images\icons8-sun-64(1).png" alt="Логотип">
+							</div>
+							<span class="menupoint">
+								<a href="#" class="textbotton">O нас</a>
+							</span>
+							<span class="menupoint">
+								<a href="#" class="textbotton">Главная</a>
+							</span>
+							<span class="menupoint">
+								<a href="#" class="textbotton">Каталог</a>
+								<span>
+									<a href="#" class="pulldown-point">Интернет-магазин</a>
+									<a href="#" class="pulldown-point">Магазины партнеров</a>
+									<a href="#" class="pulldown-point">Купить в Москве</a>
+								</span>
+							</span>
+							<span class="menupoint">
+								<a href="#" class="textbotton">Контакты</a>
+								<span>
+									<a href="#" class="pulldown-point">Доставка и оплата</a>
+									<a href="#" class="pulldown-point">Вопросы и ответы</a>
+								</span>
+							</span>
+							<span class="menupoint">
+								<a href="#" class="textbotton">Корзина</a>
+							</span>
+							<span class="netwerk_conteiner">
+								<span class="netwerk">
+									<a href="https://www.whatsapp.com/"><img src="images\icons8-whatsapp-48.png" alt="whatsapp"></a></span>
+								<span class="netwerk">
+									<a href="https://twitter.com/"><img src="images\icons8-twitter-circled-48.png" alt="twitter"></a></span>
+								<span class="netwerk">
+									<a href="https://www.instagram.com/?hl=ru"><img src="images\icons8-instagram-old-48.png" alt="instagram"></a></span>
+								<span class="netwerk">
+									<a href="https://www.facebook.com/"><img src="images\icons8-facebook-48.png" alt="facebook"></a></span>
+							</span>
+						</nav>
+					</div>
+					<div class="logoheader">
+						<div class="logo">
+							<img src="images\icons8-sun-128(1).png" alt="Логотип">
+							<h2>Маленький метеорит</h2>
+						</div> 
+					</div>
+				</div>
+			</header>
+			<main class="conteiner">
+				<aside>
+					<div class="shadow">
+						<div class="catmenu">
+							<div class="catmenu_item">
+								<a href="#">Билеты на полет в космос</a>
+								<div class="submenu">
+									<a href="#">Билет на полет в космос Эконом</a>
+									<a href="#">Билет на полет на Марс Эконом</a>
+									<a href="#">Билет на полет в космос VIP</a>
+									<a href="#">Билет на полет на Марс VIP</a>
+								</div>
+								<div class="submenu_mover">&#10749;</div>
+							</div>
+							<div class="catmenu_item">
+								<a href="#">Звезды и планеты</a>
+								<div class="submenu">
+									<a href="#">Звезда HD 225239</a>
+									<a href="#">Звезда HD 3883</a>
+								</div>
+								<div class="submenu_mover">&#10749;</div>
+							</div>
+							<div class="catmenu_item">
+								<a href="#">Осколки метеоритов</a>
+								<div class="submenu">
+									<a href="#">Сихотэ-Алинский</a>
+									<a href="#">Энсисхейм</a>
+									<a href="#">Альенде</a>
+								</div>
+								<div class="submenu_mover">&#10749;</div>
+							</div>
+							<div class="catmenu_item">
+								<a href="#">Камни и минералы</a>
+							</div>
+						</div>
+					</div>
+                </aside>
+				<div class="order">
+                    <h2>Корзина</h2>
+                    <p class="nihil">Ваша корзина пуста.</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Наименование</th>
+                                <th scope="col">Количество</th>
+                                <th scope="col">Цена</th>
+                                <th scope="col">Сумма</th>
+                                <th scope="col">Удалить</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" data-tovar="5711">1</th>
+                                <td>Товар 1</td>
+                                <td class="num">
+                                    <input type="number" value="10" pattern="^[0-9]*$">
+                                </td>
+                                <td class="rub">5</td>
+                                <td class="sum">50</td>
+                                <td class="del">
+                                    <div>+</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-tovar="3432">2</th>
+                                <td>Товар 2</td>
+                                <td class="num">
+                                    <input type="number" value="10" pattern="^[0-9]*$">
+                                </td>
+                                <td class="rub">10</td>
+                                <td class="sum">100</td>
+                                <td class="del">
+                                    <div>+</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-tovar="4846">3</th>
+                                <td>Товар 3</td>
+                                <td class="num">
+                                    <input type="number" value="10" pattern="^[0-9]*$">
+                                </td>
+                                <td class="rub">15</td>
+                                <td class="sum">150</td>
+                                <td class="del">
+                                    <div>+</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row" class="summa">Итого</th>
+                                <td colspan="5" class="allsum">300</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <form id="orderdata"  method="post" action="#">
+                        <input class="personal_data" type="text" id="name" placeholder="Имя"><br>
+                        <input class="personal_data" type="text" id="address" placeholder="Адрес"><br>
+                        <input class="personal_data" type="text" id="email" placeholder="Email"><br>
+                        <input class="personal_data" type="text" id="date" placeholder="Дата доставки"><br>
+                        <textarea class="personal_data" id="comment" placeholder="Комментарий"></textarea><br>
+                        <button class="form_button" type="submit">Оформить заказ</button>
+                    </form>
+                </div>
+			</main>
+			<footer>
+				<div class="top_footer">
+					<div class="form_text">
+						<div class="text">
+							<h3>Подпишитесь на наши новости!</h3>
+							<p>Получайте на почту анонсы и специальные предложения.</p>
+						</div>
+					</div>
+					<form method="post" action="#">
+						<div class="form">
+							<p>E-mail:&#160;&#160;</p>
+							<input type="text" name="email" class="personal_data">
+							<button class="form_button" type="submit">Подписаться</button>
+						</div>
+					</form>
+				</div>
+				<div class="middle_footer">
+					<span>8 800 011 23 58</span>
+					<span>Москва, ул. Галактическая д. 73</span>
+				</div>
+				<div class="bottom_footer">
+					<span>&#169; 2021 Chrysolite</span>
+				</div>
+			</footer> 
+		</div>
+		<div class="popup-desk">
+            <div class="popup">
+                
+            </div>
+        </div>
+	</body>
+</html>
