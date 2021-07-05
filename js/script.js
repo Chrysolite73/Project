@@ -20,33 +20,33 @@ $(function(){
 		}
 	});
 	
-	//order
-	
-	$('button.basket').click(function(){
+	$('button.login').click(function(){
         $('.popup-desk').addClass('active');
         $('.popup').html('<p class="popup-header">Личный кабинет</p><input type="text" name="fullname" placeholder="Логин"><input type="password" name="password" placeholder="Пароль"><button type="submit">Войти</button><a href="https://yandex.ru/" class="register">Зарегистрироваться</a>');
-        $('.basket').html(6);
+        $('.login').html("Вход / регистрация");
     });
     
     $('.popup-desk').click(function(e){
         if (e.target == this) {
             $(this).removeClass('active');
             $('.popup').empty();
-            $('.basket').html(5);
+            $('.login').html("Личны кабинет");
         }
     });
     
     $(document).on('click', '.register', function(e){
         e.preventDefault();
-        if ($('.basket').html()==6) {
+        if ($('.login').html()=="Вход / регистрация") {
             $('.popup').html('<p class="popup-header">Личный кабинет закрыт на ремонт.<br>Регистрации не будет до 1 января.</p><a href="https://yandex.ru/" class="register">Войти</a>');
-            $('.basket').html(5);
+            $('.login').html("Личны кабинет");
         } else {
             $('.popup').html('<p class="popup-header">Личный кабинет</p><input type="text" name="fullname" placeholder="Логин"><input type="password" name="password" placeholder="Пароль"><button type="submit">Войти</button><a href="https://yandex.ru/" class="register">Зарегистрироваться</a>');
-            $('.basket').html(6);
+            $('.login').html("Вход / регистрация");
         }
     });
-    
+   
+   //order
+	
     $(document).on('click', '.order .del > div', function(){
         tovarDelete(this);
     });

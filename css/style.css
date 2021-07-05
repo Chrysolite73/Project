@@ -35,7 +35,7 @@ a {
 	height: 90px;
 	position: fixed;
 	width: 100%;
-	background-color: rgba(112, 128, 144, .5);
+	background-color: rgba(47, 79, 79, .5);
 	top: 0;
 	z-index: 1;
 }
@@ -51,6 +51,27 @@ nav {
 	font-size: 18px;
 	color: #FFD700;
 }
+.check {
+	padding-top: 0;
+	width: 250px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.login {
+	background-color: rgba(0, 0, 0, .1);
+	height: 55px;
+	width: 250px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
+} 
+.login:hover {
+	color: #FFFF00;
+}
+
 .menupoint {
 	box-sizing: border-box;
 	width: 170px;
@@ -93,9 +114,6 @@ nav {
 	color: #FFFF00;
 }
 
-/*.netwerk_conteiner {
-	padding-top: 7px;
-}*/
 
 .netwerk {
 	padding: 0;
@@ -109,11 +127,13 @@ nav {
 	height: 300px;
 	width: 100%;
 	border-bottom: 1px solid #DAA520;
-	display:flex;
+	box-shadow: 0 0 15px rgba(255, 255, 0, .5);
 	background: url('../images/fabrice-nerfin-puHQJZd3MDg-unsplash.jpg');
+	display:flex;
 	flex-direction: column;
 	justify-content:flex-end;
 	align-items: center;
+	padding-bottom: 20px;
 	position: absolute;
 	top: 0;
 	z-index: 0;
@@ -130,11 +150,22 @@ nav {
 	margin: 0 auto;
 	flex: 1 1 auto;	
 	padding: 20px;
-	max-width: 1200px; /* редакция */
+	max-width: 1240px; /* редакция */
+	box-sizing: border-box;
 }
 .conteiner p, .conteiner ul {
 	font-size: 16px;
 	color: #FFD700;
+	position: relative;
+}
+
+li {
+    list-style-type: none;
+   }
+li:before {
+	content: "\2605";
+	position: absolute;
+	left: 0;
 }
 
 
@@ -171,9 +202,13 @@ footer {
 	height: 90px;
 	background-color: rgba(112, 128, 144, .3);
 	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(112, 128, 144, .7);
 	border: 2px solid #DAA520;
-	left: 90%;
+	left: 92%;
 	bottom: 130px;
+}
+.basket-button:hover {
+	box-shadow: 0 0 15px rgba(255, 255, 0, .5);
 }
 .top_footer {
 	height: 250px;
@@ -181,6 +216,7 @@ footer {
 	padding-top: 20px;
 	background-color: rgba(112, 128, 144, .1);
 	color: #FFD700;
+	box-shadow: 0 3px 20px rgba(245, 245, 220, .3);
 }
 .personal_data {
 	width: 400px;
@@ -263,6 +299,7 @@ aside {
 	font-size: 16px;
 	border-radius: 10px;
 	border: 3px groove #FFD700;
+	box-shadow: 0 0 10px rgba(255, 215, 0, .5);
 	background: url('../images/fabrice-nerfin-puHQJZd3MDg-unsplash.jpg');
 	color: #FFD700;
 }
@@ -323,24 +360,52 @@ aside {
 }
 
 /* catalog */
-.catalog {
-	display: flex;
-	gap: 8px;
-}
+
 .cat-blocks {
 	flex: 1 1 auto;
 	display: flex;
 	flex-wrap: wrap;
-	align-content: flex-start;
-	padding: 20px;
+	/*align-content: flex-start;*/
+	padding-top: 20px;
+	box-sizing: border-box;
+	cursor: pointer;
 	gap: 10px;
 }
 .cat-unit {
-	height: 400px;
-	width: 280px;
-	background: #FAFAD2;
-	/*padding: 10px;*/
-	/*gap: 10px;*/
+	height: 350px;
+	width: 292px;
+	border-radius: 5px;
+	background-color: rgba(47, 79, 79, .2);
+	box-sizing: border-box;
+	box-shadow: 5px 1px 8px rgba(112, 128, 144, .4);
+}
+.goods {
+	padding-top: 2px;
+	padding-left: 2px;
+	height: 290px;
+	width: 290px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.goods img {
+	border-radius: 50%;
+	transition: 1s;
+}
+.goods img:hover {
+	opacity: .8;
+	transform: scale(1.1);
+	z-index: 1;
+}
+.goods-text {
+	padding: 10px;
+} 
+.goods-text p:hover {
+	color: #FFFF00;
+} 
+.goods-text p:nth-child(2) {
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 /* order */
 .order {
