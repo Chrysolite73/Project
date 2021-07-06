@@ -22,14 +22,14 @@ $(function(){
 	
 	$('button.login').click(function(){
         $('.popup-desk').addClass('active');
-        $('.popup').html('<p class="popup-header">Личный кабинет</p><input type="text" name="fullname" placeholder="Логин"><input type="password" name="password" placeholder="Пароль"><button type="submit">Войти</button><a href="https://yandex.ru/" class="register">Зарегистрироваться</a>');
+        $('.popup-desk').html('<div class="div-popup"><p class="popup-header">Личный кабинет</p><input type="text" name="fullname" placeholder="Логин"><input type="password" name="password" placeholder="Пароль"><button type="submit" class="form_button">Войти</button><a href="https://yandex.ru/" class="register form_button">Зарегистрироваться</a></div>');
         $('.login').html("Вход / регистрация");
     });
     
     $('.popup-desk').click(function(e){
         if (e.target == this) {
             $(this).removeClass('active');
-            $('.popup').empty();
+            $('.popup-desk').empty();
             $('.login').html("Личны кабинет");
         }
     });
@@ -37,10 +37,10 @@ $(function(){
     $(document).on('click', '.register', function(e){
         e.preventDefault();
         if ($('.login').html()=="Вход / регистрация") {
-            $('.popup').html('<p class="popup-header">Личный кабинет закрыт на ремонт.<br>Регистрации не будет до 1 января.</p><a href="https://yandex.ru/" class="register">Войти</a>');
+            $('.popup-desk').html('<div class="div-popup"><p class="popup-header">Технические работы.<br>Регистрации не будет до 1 августа 2021.</p><a href="https://yandex.ru/" class="register form_button">Войти</a></div>');
             $('.login').html("Личны кабинет");
         } else {
-            $('.popup').html('<p class="popup-header">Личный кабинет</p><input type="text" name="fullname" placeholder="Логин"><input type="password" name="password" placeholder="Пароль"><button type="submit">Войти</button><a href="https://yandex.ru/" class="register">Зарегистрироваться</a>');
+            $('.popup-desk').html('<div class="div-popup"><p class="popup-header">Личный кабинет</p><input type="text" name="fullname" placeholder="Логин"><input type="password" name="password" placeholder="Пароль"><button type="submit" class="form_button">Войти</button><a href="https://yandex.ru/" class="register form_button">Зарегистрироваться</a></div>');
             $('.login').html("Вход / регистрация");
         }
     });
@@ -58,9 +58,9 @@ $(function(){
     $('#date').click(function(){
         if ($('#date').val()) {
             selected_day = makeSelectedDate($('#date').val());
-            makePopup(selected_day.getFullYear(),selected_day.getMonth());
+            makePopup(selected_day.getFullYear(),selected_day.getMonth()); //makePopup
         } else {
-            makePopup(TODAY.getFullYear(),TODAY.getMonth());
+            makePopup(TODAY.getFullYear(),TODAY.getMonth()); //makePopup
         }
     });
     

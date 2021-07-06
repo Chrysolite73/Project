@@ -9,13 +9,14 @@ function makePopup(my_year, my_month){
     let prev_days = (my_weekday + 6) % 7;
     let weeks = Math.ceil((month_length + prev_days) / 7);
 
-    let str = '<div class="header">';
+    
+	let str = '<div class="t_header">';
     str += '<span class="left">&#171;</span>';
     str += '<b>' + MONTHNAMES[my_month] + ' ' + my_year + '</b>';
     str += '<span class="right">&#187;</span>';
     str += '</div>';
     
-    str += '<table><tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th class="holiday">Сб</th><th class="holiday">Вс</th></tr>';
+    str += '<table class="t_date"><tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th class="holiday">Сб</th><th class="holiday">Вс</th></tr>';
     for (let i = 0; i < weeks; i++) {
         str += '<tr>';
         for (let j = 0; j < 7; j++) {
@@ -53,11 +54,11 @@ function makePopup(my_year, my_month){
     }
     str += '</table>';
     
-    str += '<div class="footer"></div>';
+    str += '<div class="t_footer"></div>';
     
-    $('.popup').html(str);
+    $('.calendar').html(str);//div-popup
     
-    $('.header span').click(function(){
+    $('.t_header span').click(function(){
         let a = my_year;
         let b = my_month;
         if ($(this).hasClass('left')) {
@@ -83,7 +84,7 @@ function makePopup(my_year, my_month){
         let str = arr[2] + '-' + arr[1] + '-' + arr[0];
         $('#date').val(str);
         $('.active').removeClass('active');
-        $('.popup').empty();
+        $('.calendar').empty();//div-popup
     });
     
     $('.popup-desk').addClass('active');

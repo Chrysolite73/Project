@@ -75,9 +75,9 @@ nav {
 .menupoint {
 	box-sizing: border-box;
 	width: 170px;
-	height: 65px;
+	height: 55px;
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 15px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
 	display: inline-block;
@@ -92,7 +92,7 @@ nav {
 	display: none;
 	position: absolute;
 	background: rgb(112, 128, 144);
-	top: 65px;
+	top: 55px;
 	left: 0;
 	padding: 10px 10px 5px;
 	border-radius: 5px;
@@ -258,6 +258,7 @@ footer {
 	font-size: 18px;
 	color: #2F4F4F;
 	cursor: pointer;
+	margin-right: 10px;
 }
 .form_button:hover {
 	background-color: #FFFF00;
@@ -375,7 +376,7 @@ aside {
 	height: 350px;
 	width: 292px;
 	border-radius: 5px;
-	background-color: rgba(47, 79, 79, .2);
+	background-color: rgba(47, 79, 79, .7);
 	box-sizing: border-box;
 	box-shadow: 5px 1px 8px rgba(112, 128, 144, .4);
 }
@@ -468,7 +469,39 @@ tfoot tr {
 	flex-direction: column;
 	/*align-items: center;*/
 }
+
+.calendar {
+	position: absolute;
+	left: calc(50% - 150px);
+	top: 250px;
+	height: 305px;
+	width: 300px;
+	border-radius: 20px;
+	padding: 20px;
+	box-sizing: border-box;
+	color: #FFD700;
+	font-size: 18px;
+	background-color: rgba(47, 79, 79, .9);
+	text-align: center;
+}
+.t_date {
+	margin: 0 auto;
+}
+.t_date td, .left, .right {
+	cursor: pointer;
+	padding: 5px;
+}
+.workday:hover {
+	background-color: rgba(0, 255, 255, .5);
+}
+.holiday {
+	color: #7FFFD4;
+}
+.left, .right {
+	font-size: 20px;
+}
 /* popup */
+
 .popup-desk {
 	display: none;
 	position: fixed;
@@ -478,16 +511,47 @@ tfoot tr {
 	right: 0;
 	background: rgba(0,0,0,.3);
 }
-.popup-desk.active {
-	display: block;
-}
-.popup {
+.div-popup {
 	position: absolute;
 	left: calc(50% - 150px);
 	top: 300px;
-	width: 300px;
-	background: #fff;
+	width: 450px;
 	border-radius: 20px;
 	padding: 30px;
 	box-sizing: border-box;
+	color: #FFD700;
+	background-color: rgba(47, 79, 79, .9);
+	text-align: center;
+}
+.popup-desk.active {
+	display: block;
+	z-index: 3;
+}
+.div-popup p {
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+.div-popup input {
+	width: 400px;
+	height: 50px;
+	background-color: #F5F5DC;
+	border-radius: 10px;
+	border: 2px solid #FFD700;
+	box-sizing: border-box;
+	font-size: 18px;
+	color: #2F4F4F;
+	margin-bottom: 20px;
+}
+.div-popup button, .div-popup a {
+	background-color: #7FFFD4;
+	border: 2px solid #7FFFD4;
+
+}
+.div-popup a {
+	border: 12px solid #7FFFD4;
+}
+.div-popup a:hover {
+	border: 12px solid #FFFF00;
 }
