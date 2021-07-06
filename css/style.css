@@ -67,6 +67,7 @@ nav {
 	text-transform: uppercase;
 	display: inline-block;
 	position: relative;
+	
 } 
 .login:hover {
 	color: #FFFF00;
@@ -91,8 +92,8 @@ nav {
 .menupoint > span {
 	display: none;
 	position: absolute;
-	background: rgb(112, 128, 144);
-	top: 55px;
+	background: rgba(112, 128, 144, .6);
+	top: 52px;
 	left: 0;
 	padding: 10px 10px 5px;
 	border-radius: 5px;
@@ -102,16 +103,19 @@ nav {
 .menupoint:hover > span,
 .menupoint > span:hover {
 	display: block;
+	box-shadow: 0 0 15px rgba(112, 128, 144, .7);
 }
 .menupoint:hover {
 	border-radius: 5px;
-	background: rgba(112, 128, 144, .7); 
+	background: rgba(112, 128, 144, .6); 
+	box-shadow: 0 0 15px rgba(112, 128, 144, .7);
 }
 .menupoint:hover .textbotton {
 	color: #FFFF00;
 }
 .pulldown-point:hover {
 	color: #FFFF00;
+	box-shadow: 0 0 15px rgba(112, 128, 144, .7);
 }
 
 
@@ -376,13 +380,13 @@ aside {
 	height: 350px;
 	width: 292px;
 	border-radius: 5px;
-	background-color: rgba(47, 79, 79, .7);
+	background-color: rgba(47, 79, 79, .2);
 	box-sizing: border-box;
-	box-shadow: 5px 1px 8px rgba(112, 128, 144, .4);
+	box-shadow: 5px 1px 15px rgba(255, 255, 255, .3);
 }
 .goods {
 	padding-top: 2px;
-	padding-left: 2px;
+	padding-left: 1px;
 	height: 290px;
 	width: 290px;
 	display: flex;
