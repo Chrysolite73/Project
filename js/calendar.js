@@ -10,7 +10,7 @@ function makePopup(my_year, my_month){
     let weeks = Math.ceil((month_length + prev_days) / 7);
 
     
-	let str = '<div class="t_header">';
+	let str = '<div class="calendar"><div class="t_header">';
     str += '<span class="left">&#171;</span>';
     str += '<b>' + MONTHNAMES[my_month] + ' ' + my_year + '</b>';
     str += '<span class="right">&#187;</span>';
@@ -55,8 +55,9 @@ function makePopup(my_year, my_month){
     str += '</table>';
     
     str += '<div class="t_footer"></div>';
+	str += '</div>';
     
-    $('.calendar').html(str);//div-popup
+    $('.popup-desk').html(str);//div-popup calendar
     
     $('.t_header span').click(function(){
         let a = my_year;

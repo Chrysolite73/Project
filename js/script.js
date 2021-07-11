@@ -22,7 +22,7 @@ $(function(){
 	
 	$('button.login').click(function(){
         $('.popup-desk').addClass('active');
-        $('.popup-desk').html('<div class="div-popup"><p class="popup-header">Личный кабинет</p><input type="text" name="fullname" placeholder="Логин"><input type="password" name="password" placeholder="Пароль"><button type="submit" class="form_button">Войти</button><a href="https://yandex.ru/" class="register form_button">Зарегистрироваться</a></div>');
+        $('.popup-desk').html('<div class="div-popup"><p class="popup-header">Личный кабинет</p><input type="text" class="personal_data" name="fullname" placeholder="Логин"><input type="password" class="personal_data" name="password" placeholder="Пароль"><button type="submit" class="form_button">Войти</button><a href="https://yandex.ru/" class="register form_button">Зарегистрироваться</a></div>');
         $('.login').html("Вход / регистрация");
     });
     
@@ -40,7 +40,7 @@ $(function(){
             $('.popup-desk').html('<div class="div-popup"><p class="popup-header">Технические работы.<br>Регистрации не будет до 1 августа 2021.</p><a href="https://yandex.ru/" class="register form_button">Войти</a></div>');
             $('.login').html("Личны кабинет");
         } else {
-            $('.popup-desk').html('<div class="div-popup"><p class="popup-header">Личный кабинет</p><input type="text" name="fullname" placeholder="Логин"><input type="password" name="password" placeholder="Пароль"><button type="submit" class="form_button">Войти</button><a href="https://yandex.ru/" class="register form_button">Зарегистрироваться</a></div>');
+            $('.popup-desk').html('<div class="div-popup"><p class="popup-header">Личный кабинет</p><input type="text" class="personal_data" name="fullname" placeholder="Логин"><input type="password" class="personal_data" name="password" placeholder="Пароль"><button type="submit" class="form_button">Войти</button><a href="https://yandex.ru/" class="register form_button">Зарегистрироваться</a></div>');
             $('.login').html("Вход / регистрация");
         }
     });
@@ -58,16 +58,30 @@ $(function(){
     $('#date').click(function(){
         if ($('#date').val()) {
             selected_day = makeSelectedDate($('#date').val());
-            makePopup(selected_day.getFullYear(),selected_day.getMonth()); //makePopup
+            makePopup(selected_day.getFullYear(),selected_day.getMonth());
         } else {
-            makePopup(TODAY.getFullYear(),TODAY.getMonth()); //makePopup
+            makePopup(TODAY.getFullYear(),TODAY.getMonth());
         }
+        $('#date').mask('00-00-0000');
     });
     
-    $('#date').mask('00-00-0000');
     
     $('#orderdata').on('submit', function(e){// отправка формы
         e.preventDefault();
         orderAction();
     })
+    
+    if ($('.product').length) {
+        $('.main-image').on('click', 'img', seebigimage);
+        $('.small-image').on('click', 'img', changeimage);
+    }
+    
+   /* if ($('.small-image > img').length) {
+        $('.small-image > img').each(function(){
+            $(this).css({
+                'margin-top': (160 - $(this).height()) / 2,
+                'margin-left': (160 - $(this).width()) / 2
+            })
+        });
+    }*/
 });
