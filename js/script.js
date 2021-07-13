@@ -30,7 +30,7 @@ $(function(){
         if (e.target == this) {
             $(this).removeClass('active');
             $('.popup-desk').empty();
-            $('.login').html("Личны кабинет");
+            $('.login').html("Личный кабинет");
         }
     });
     
@@ -38,7 +38,7 @@ $(function(){
         e.preventDefault();
         if ($('.login').html()=="Вход / регистрация") {
             $('.popup-desk').html('<div class="div-popup"><p class="popup-header">Технические работы.<br>Регистрации не будет до 1 августа 2021.</p><a href="https://yandex.ru/" class="register form_button">Войти</a></div>');
-            $('.login').html("Личны кабинет");
+            $('.login').html("Личный кабинет");
         } else {
             $('.popup-desk').html('<div class="div-popup"><p class="popup-header">Личный кабинет</p><input type="text" class="personal_data" name="fullname" placeholder="Логин"><input type="password" class="personal_data" name="password" placeholder="Пароль"><button type="submit" class="form_button">Войти</button><a href="https://yandex.ru/" class="register form_button">Зарегистрироваться</a></div>');
             $('.login').html("Вход / регистрация");
