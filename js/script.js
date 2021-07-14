@@ -9,13 +9,21 @@ $(function(){
 			$('.catmenu_item.open').removeClass('open').find('.submenu').animate({
 				height: 0
 			}, 1000, function(){
+				let q = 0;
+				$(_this).parent().find('.submenu a').each(function() {
+					q += $(this).height();
+				});
 				$(_this).parent().addClass('open').find('.submenu').animate({
-					height: ($(_this).parent().find('.submenu a').length * $('.submenu a').height())
+					height: q
 				}, 1000);
 			});
 		} else {
+			let q = 0;
+			$(this).parent().find('.submenu a').each(function() {
+				q += $(this).height();
+			});
 			$(this).parent().addClass('open').find('.submenu').animate({
-				height: ($(this).parent().find('.submenu a').length * $('.submenu a').height())
+					height: q
 			}, 1000);
 		}
 	});
